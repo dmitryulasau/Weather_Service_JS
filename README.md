@@ -8,7 +8,7 @@ Weather data provided by [OpenWeather API](https://openweathermap.org/api)
 
 With this weather service you can check the current weather in any city or by zip code. You will get information about today's date, current temperature, UV index, humidity, wind, pressure, visibility.
 
-Deployed version [Weather Service]().
+Deployed version [Weather Service](https://dmitryulasau.github.io/week7_Weather_Service_JS/).
 
 ## Questions?
 
