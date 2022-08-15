@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WEATHER</title>
+
+    <!-- FONT -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FAVICON -->
+    <link
+      rel="shortcut icon"
+      href="./images/favicon/favicon-16x16.png"
+      type="image/x-icon"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- BOOTSTRAP -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+
+    <!-- JS for AXIOS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"
+      defer
+    ></script>
+
+    <!-- JS for BOOTSTRAP with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+      integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+      integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+      crossorigin="anonymous"
+      defer
+    ></script>
+
+    <!-- ION ICONS -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+      defer
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+      def
+    ></script>
+
+    <!-- SCRIPT -->
+    <script src="./js/script.js" defer></script>
+  </head>
+  <body>
+    <div class="container container-sm container-md">
+      <h1 align="center">WEATHER SERVICE</h1>
+
+      <!-- SEARCH FIELD -->
+      <form>
+        <div align="center">
+          <input
+            type="text"
+            class="form-control mb-3"
+            placeholder="CITY OR ZIPCODE"
+            name="location"
+          />
+
+          <button class="btn btn-warning form-control">CHECK WEATHER</button>
+        </div>
+      </form>
+
+      <!-- CONTAINER -->
+      <div class="info">
+        <div align="center" class="card card-head">
+          <div class="img-card">
+            <img
+              class="card-img-top"
+              src="https://res.cloudinary.com/dulasau/image/upload/v1660502370/iStock-477110708_1_1_av526f.jpg"
+              alt="Weather types"
+            />
+          </div>
+          <!-- INFO SECTION -->
+          <div><h6 id="displayDateTime"></h6></div>
+          <div class="card-body">
+            <div id="status-image" class="status-img">
+              <h4 class="card-title card-h">Location</h4>
+              <h2 class="card-title card-h">27</h2>
+            </div>
+            <!-- INFO TABLE -->
+            <div class="container">
+              <!-- ROW 1 -->
+              <div class="row">
+                <!-- FEEKS LIKE -->
+                <div class="col">
+                  <div
+                    class="card mb-3"
+                    style="max-width: 10rem; max-height: 5.5rem"
+                  >
+                    <div class="card-header">
+                      <span
+                        ><ion-icon name="thermometer-outline"></ion-icon></span
+                      >&nbsp;FEELS LIKE
+                    </div>
+                    <div class="card-body card-body-info">
+                      <h5 class="card-title feels">INFO</h5>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- UV INDEX -->
+                <div class="col">
+                  <div
+                    class="card mb-3"
+                    style="max-width: 10rem; max-height: 5.5rem"
+                  >
+                    <div class="card-header">
+                      <span><ion-icon name="sunny-outline"></ion-icon></span
+                      >&nbsp;UV INDEX
+                    </div>
+                    <div class="card-body card-body-info">
+                      <h5 class="card-title">INFO</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ROW 2 -->
+              <div class="row">
+                <!-- HUMIDITY -->
+                <div class="col">
+                  <div
+                    class="card mb-3"
+                    style="max-width: 10rem; max-height: 5.5rem"
+                  >
+                    <div class="card-header">
+                      <ion-icon name="water-outline"></ion-icon>&nbsp;HUMIDITY
+                    </div>
+                    <div class="card-body card-body-info">
+                      <h5 class="card-title">INFO</h5>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- WIND -->
+                <div class="col">
+                  <div
+                    class="card mb-3"
+                    style="max-width: 10rem; max-height: 5.5rem"
+                  >
+                    <div class="card-header">
+                      <span><ion-icon name="compass-outline"></ion-icon></span
+                      >&nbsp;WIND
+                    </div>
+                    <div class="card-body card-body-info">
+                      <h5 class="card-title">INFO</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ROW 3 -->
+              <div class="row">
+                <!-- PRESSURE -->
+                <div class="col">
+                  <div
+                    class="card mb-3"
+                    style="max-width: 10rem; max-height: 5.5rem"
+                  >
+                    <div class="card-header">
+                      <ion-icon name="speedometer-outline"></ion-icon
+                      >&nbsp;PRESSURE
+                    </div>
+                    <div class="card-body card-body-info">
+                      <h5 class="card-title">INFO</h5>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- VISIBILITY -->
+                <div class="col">
+                  <div
+                    class="card mb-3"
+                    style="max-width: 10rem; max-height: 5.5rem"
+                  >
+                    <div class="card-header">
+                      <ion-icon name="eye-outline"></ion-icon>&nbsp;VISIBILITY
+                    </div>
+                    <div class="card-body card-body-info">
+                      <h5 class="card-title">INFO</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- WEATHER DESCRIPTION -->
+            <h3>Weather description</h3>
+          </div>
+
+          <!-- END INFO TABLE -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
