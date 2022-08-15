@@ -171,7 +171,7 @@ async function showPosition(position) {
   console.log(longitude);
 
   let geo =
-    await axios.get(`https://api.geonames.org/findNearestAddress?lat=${latitude}&lng=${longitude}&username=dmitrushok
+    await axios.get(`http://api.geonames.org/findNearestAddress?lat=${latitude}&lng=${longitude}&username=dmitrushok
   `);
 
   geo = geo.data; // XML
