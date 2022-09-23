@@ -70,7 +70,7 @@
     <script src="./js/script.js" defer></script>
   </head>
   <body>
-    <div class="container container-sm container-md">
+    <div class="container">
       <h1 align="center">WEATHER SERVICE</h1>
 
       <!-- SEARCH FIELD -->
@@ -86,7 +86,6 @@
           <button class="btn btn-warning form-control">CHECK WEATHER</button>
         </div>
       </form>
-
       <!-- CONTAINER -->
       <div class="info">
         <div align="center" class="card card-head">
@@ -99,124 +98,124 @@
           </div>
           <!-- INFO SECTION -->
           <div><h6 id="displayDateTime"></h6></div>
-          <div class="card-body">
+          <div class="">
             <div id="status-image" class="status-img">
               <h4 class="card-title card-h">Location</h4>
-              <h2 class="card-title card-h">27</h2>
+              <h2 class="card-title card-h">Temperature</h2>
             </div>
             <!-- INFO TABLE -->
-            <div class="container">
-              <!-- ROW 1 -->
-              <div class="row">
-                <!-- FEEKS LIKE -->
-                <div class="col">
-                  <div
-                    class="card mb-3"
-                    style="max-width: 10rem; max-height: 5.5rem"
-                  >
-                    <div class="card-header">
-                      <span
-                        ><ion-icon name="thermometer-outline"></ion-icon></span
-                      >&nbsp;FEELS LIKE
-                    </div>
-                    <div class="card-body card-body-info">
-                      <h5 class="card-title feels">INFO</h5>
-                    </div>
+          </div>
+          <div class="container2">
+            <!-- ROW 1 -->
+            <div class="row">
+              <!-- FEEKS LIKE -->
+              <div class="col">
+                <div
+                  class="card mb-3"
+                  style="max-width: 8rem; max-height: 5.5rem"
+                >
+                  <div class="card-header">
+                    <span><ion-icon name="thermometer-outline"></ion-icon></span
+                    >&nbsp;FEELS LIKE
                   </div>
-                </div>
-
-                <!-- UV INDEX -->
-                <div class="col">
-                  <div
-                    class="card mb-3"
-                    style="max-width: 10rem; max-height: 5.5rem"
-                  >
-                    <div class="card-header">
-                      <span><ion-icon name="sunny-outline"></ion-icon></span
-                      >&nbsp;UV INDEX
-                    </div>
-                    <div class="card-body card-body-info">
-                      <h5 class="card-title">INFO</h5>
-                    </div>
+                  <div class="card-body card-body-info">
+                    <h5 class="card-title-info feels">INFO</h5>
                   </div>
                 </div>
               </div>
 
-              <!-- ROW 2 -->
-              <div class="row">
-                <!-- HUMIDITY -->
-                <div class="col">
-                  <div
-                    class="card mb-3"
-                    style="max-width: 10rem; max-height: 5.5rem"
-                  >
-                    <div class="card-header">
-                      <ion-icon name="water-outline"></ion-icon>&nbsp;HUMIDITY
-                    </div>
-                    <div class="card-body card-body-info">
-                      <h5 class="card-title">INFO</h5>
-                    </div>
+              <!-- UV INDEX -->
+              <div class="col">
+                <div
+                  class="card mb-3"
+                  style="max-width: 8rem; max-height: 5.5rem"
+                >
+                  <div class="card-header">
+                    <span><ion-icon name="sunny-outline"></ion-icon></span
+                    >&nbsp;UV INDEX
+                  </div>
+                  <div class="card-body card-body-info">
+                    <h5 class="card-title-info">INFO</h5>
                   </div>
                 </div>
+              </div>
+            </div>
 
-                <!-- WIND -->
-                <div class="col">
-                  <div
-                    class="card mb-3"
-                    style="max-width: 10rem; max-height: 5.5rem"
-                  >
-                    <div class="card-header">
-                      <span><ion-icon name="compass-outline"></ion-icon></span
-                      >&nbsp;WIND
-                    </div>
-                    <div class="card-body card-body-info">
-                      <h5 class="card-title">INFO</h5>
-                    </div>
+            <!-- ROW 2 -->
+            <div class="row">
+              <!-- HUMIDITY -->
+              <div class="col">
+                <div
+                  class="card mb-3"
+                  style="max-width: 8rem; max-height: 5.5rem"
+                >
+                  <div class="card-header">
+                    <ion-icon name="water-outline"></ion-icon>&nbsp;HUMIDITY
+                  </div>
+                  <div class="card-body card-body-info">
+                    <h5 class="card-title-info">INFO</h5>
                   </div>
                 </div>
               </div>
 
-              <!-- ROW 3 -->
-              <div class="row">
-                <!-- PRESSURE -->
-                <div class="col">
-                  <div
-                    class="card mb-3"
-                    style="max-width: 10rem; max-height: 5.5rem"
-                  >
-                    <div class="card-header">
-                      <ion-icon name="speedometer-outline"></ion-icon
-                      >&nbsp;PRESSURE
-                    </div>
-                    <div class="card-body card-body-info">
-                      <h5 class="card-title">INFO</h5>
-                    </div>
+              <!-- WIND -->
+              <div class="col">
+                <div
+                  class="card mb-3"
+                  style="max-width: 8rem; max-height: 5.5rem"
+                >
+                  <div class="card-header">
+                    <span><ion-icon name="compass-outline"></ion-icon></span
+                    >&nbsp;WIND
+                  </div>
+                  <div class="card-body card-body-info">
+                    <h5 class="card-title-info">INFO</h5>
                   </div>
                 </div>
+              </div>
+            </div>
 
-                <!-- VISIBILITY -->
-                <div class="col">
-                  <div
-                    class="card mb-3"
-                    style="max-width: 10rem; max-height: 5.5rem"
-                  >
-                    <div class="card-header">
-                      <ion-icon name="eye-outline"></ion-icon>&nbsp;VISIBILITY
-                    </div>
-                    <div class="card-body card-body-info">
-                      <h5 class="card-title">INFO</h5>
-                    </div>
+            <!-- ROW 3 -->
+            <div class="row">
+              <!-- PRESSURE -->
+              <div class="col">
+                <div
+                  class="card mb-3"
+                  style="max-width: 8rem; max-height: 5.5rem"
+                >
+                  <div class="card-header">
+                    <ion-icon name="speedometer-outline"></ion-icon
+                    >&nbsp;PRESSURE
+                  </div>
+                  <div class="card-body card-body-info">
+                    <h5 class="card-title-info">INFO</h5>
+                  </div>
+                </div>
+              </div>
+
+              <!-- VISIBILITY -->
+              <div class="col">
+                <div
+                  class="card mb-3"
+                  style="max-width: 8rem; max-height: 5.5rem"
+                >
+                  <div class="card-header">
+                    <ion-icon name="eye-outline"></ion-icon>&nbsp;VISIBILITY
+                  </div>
+                  <div class="card-body card-body-info">
+                    <h5 class="card-title-info">INFO</h5>
                   </div>
                 </div>
               </div>
             </div>
             <!-- WEATHER DESCRIPTION -->
-            <h3>Weather description</h3>
+            <h3 align="center">Weather description</h3>
           </div>
-
           <!-- END INFO TABLE -->
         </div>
       </div>
+
+      <div></div>
     </div>
   </body>
 </html>
